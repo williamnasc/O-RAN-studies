@@ -91,6 +91,34 @@ Essa interface é disponível tanto a eNB quanto a gNB.
 
 ## Loops de Controle
 
+![Control Loops](figs/control_loops.png)
+
+A arquitetura O-RAN suporta pelomenos 3 loops de controle envolvendo
+suas entidades. São eles:
+
+- Non-RT control loops (tempo >= 1s);
+- Near-RT control loops (tempo >= 10ms);
+- RT control loops (tempo < 10ms);
+
+Os loops existem em vários níveis e rodam simultaneamente. 
+Dependendo do caso de uso eles podem ou não interagir entre si.
+
+Existem os casos de usos que tratam das interações entre os RICs 
+e também as interações entre o O-CU-CP e os loops de controle do O-DU 
+(responsáveis por, por exemplo: controle de chamadas e mobilidade, HARQ, formatação de feixe...)
+
+Os loops de controle ocorrem em uma faixa de tempo esperada
+
+A O-RAN TS: "Use Cases Detailed Specification" define como que acontecem essas interações
+entre os RICs e loops de controle;
+
+---
+
+OBS: Oque são os RICs?
+
+---
+
+
 ---
 
 ### Dúvidas
