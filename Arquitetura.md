@@ -7,7 +7,7 @@ A arquitetura pode ser apresentada em diferentes escopos
 ![High Level Arq](figs/high_level.png)
 
 Nessa perspectiva, temos 4 grandes entidades,
-- O sistema de geranciamento e orquestração,
+- O sistema de gerenciamento e orquestração,
 onde se encontra o Non-RT RIC;
 - As funções de rede da RAN,
 onde se encontra o Near-RT RIC;
@@ -60,3 +60,42 @@ Esses serviços podem ser consumidos por Y1 Consumers.
 
 ## Arquitetura em Nível Lógico
 
+![Logic Level Arq](figs/logical_level.png)
+
+Como mostrado na Figura acima, 
+
+Algumas das partes apresentadas nesse nível são
+
+- Near-RT RIC → Controlador inteligente quase em tempo real (10 ms – 1 s).
+- O-CU-CP (Centralized Unit – Control Plane) → Gerencia controle de sinalização, RRC, parte do PDCP.
+- O-CU-UP (Centralized Unit – User Plane) → Trata o tráfego de dados do usuário, PDCP, encaminhamento de pacotes.
+- O-DU (Distributed Unit) → Processa as camadas RLC, MAC e parte do PHY.
+- O-RU (Radio Unit) → Lida com a parte de RF e camada física mais próxima da antena.
+- eNB (eNodeB) → Agrega as funções de estação radio base do LTE/4G.  
+- O-Cloud → Plataforma de computação em nuvem que podem hospedar as NFs relevantes do O-RAN (como Near-RT RIC, O-CU-CP, O-CU-UP e O-DU, etc.). 
+
+O Near-RT RIC se conecta com a gNB (CU e DU) e eNB através da interface E2, e também 
+presta serviço aos Y1 Consumers pela interface Y1;
+
+O O-RU fornece a interface Open Fronthaul M-Plane ao O-DU autorizado em modo hierárquico, ou ao O-DU e SMO autorizados em modo híbrido
+
+O-DU fornece a interface D2 para se conectar com O-DUs pares para suportar a agregação de portadora inter O-DU. A interface D2 inclui serviços D2-u e D2-c.
+
+### Interface das UEs
+
+Dentro dessa estrutura os UEs podem se conectar a RAN por meio da interface Uu.
+Essa interface é disponível tanto a eNB quanto a gNB.
+
+![Uu interface in Level Arq](figs/uu_interface.png)
+
+
+## Loops de Controle
+
+---
+
+### Dúvidas
+
+- Quando falandos de funções de rede, estamos falando de que exatamente?
+- O que fazem essas interfaces serem a mesma interface? as interface E2 com o RIC?
+- Qual o Papel do SMO em relação as outras partes?
+- 
