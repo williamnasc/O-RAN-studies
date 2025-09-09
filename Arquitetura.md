@@ -114,16 +114,17 @@ entre os RICs e loops de controle;
 
 ---
 
-OBS: Oque são os RICs?
+**OBS:** O que são os RICs?
 
----
+RIC (RAN Intelligent Controller) é um controlador que utiliza de 
+IA/ML, algoritmos de otimização, políticas ou outras estratégias para
+atuar sobre a rede através das interfaces disponíveis.
 
 
 ---
 
 ### Dúvidas
 
-- Quando falandos de funções de rede, estamos falando de que exatamente?
+- Quando falando de funções de rede, estamos falando de que exatamente?
 - O que fazem essas interfaces serem a mesma interface? as interface E2 com o RIC?
 - Qual o Papel do SMO em relação as outras partes?
-- 
