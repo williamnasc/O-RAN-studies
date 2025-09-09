@@ -125,6 +125,7 @@ atuar sobre a rede através das interfaces disponíveis.
 
 ### Dúvidas
 
+- Onde fica localizado o SMO?
 - Quando falando de funções de rede, estamos falando de que exatamente?
 - O que fazem essas interfaces serem a mesma interface? as interface E2 com o RIC?
 - Qual o Papel do SMO em relação as outras partes?
