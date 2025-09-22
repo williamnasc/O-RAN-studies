@@ -43,9 +43,9 @@ Os serviços são implementados em rApps e tem acesso à SMOS Communication (int
 ## Near-RT RIC
 
 O Near-RT RIC é um NF do O-RAN que permite 
-- o controle e a otimização em tempo quase real dos serviços e recursos dos Nós E2, 
-- coleta de dados detalhados e ações na interface E2
-- com laços de controle na ordem de 10 ms a 1 s.
+- O controle e a otimização em tempo quase real dos serviços e recursos dos Nós E2, 
+- Coleta de dados detalhados e ações na interface E2
+- Com laços de controle na ordem de 10 ms a 1 s.
 
 O Near- RT RIC utiliza xApps para coleta e ações na interface E2.
 
