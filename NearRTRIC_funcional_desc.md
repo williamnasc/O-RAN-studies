@@ -80,15 +80,65 @@ Cada interface apresenta seus respectivos serviços e capacidades.
 
 #### E2 Termination
 
-#### A1 Termination
+- Conexão SCTP (Stream Control Transmission Protocol) de cada Nó E2;
+- Roteamento de mensagens dos xApps para os Nós E2.
+- Manipulação das mensagens de relacionadas a E2 connectivity;
+- Recebimento e resposta dos E2 Setup Request;
+- Notificar xApps da lista de funções de rede suportadas pelo nó E2;
+- Notificar a um Nó E2 da lista de funções aceitas;
+
+**obs:** O SCTP é um protocolo de transporte da camada de rede usado para transportar mensagens de sinalização de telecomunicações.
+
+### A1 Termination
+
+Permite o uso da interface A1.
+- Fornece API genérica para enviar e receber mensagens via A1
+  - Politicas A1;
+  - Informações do Non-RT RIC;
+  - Feedbacks de politicas A1 para o Non-RT RIC;
+- Envio de Politicas A1 para os xApps;
 
 #### O1 Termination
 
+Permite o uso da interface O1.
+
+A Plataforma produz serviços de gerenciamento (management services), chamados de MnS que são consumidos pelo SMO via O1;
+
+- Serviços de gerenciamento de provisionamento do RIC via O1; 
+- Traduzir serviços de gerenciamento O1 para as APIs do RIC; 
+- Serviços de FM (Fault Management) para relatar falhas e eventos do RIC via O1; 
+- Serviços de PM para relatar dados de PM via O1; 
+- Serviços de gerenciamento de arquivos 
+  - Baixar 
+    - arquivos de ML, arquivos de software, etc. e 
+  - Upload 
+    - arquivos de log/trace; 
+- Serviços de vigilância de comunicação na O1.
+
 #### Y1 Termination
+
+Permite o uso da interface Y1. 
+- Suporte para expor informações analíticas de RAN pela Y1.
 
 ### API Enablement
  
- TERMINAR
+ As APIs do Near-RT RIC podem ser 
+ - Categorizaras com base na interação com a plataforma 
+ - Estar relacionadas a serviços relacionados a
+   - E2, 
+   - A1, 
+   - Gerenciamento (Management), 
+   - SDL.
+
+Essa funcionalidade oferece suporte para o funcionamento das APIs Near-RT RIC
+
+Os serviços da API Enablement incluem:
+- Registro/Armazenamento das APIs;
+- Descoberta as APIs registradas;
+- Autenticação do xApps para usar as APIs;
+- Evitar conflitos de compatibilidade entre xApps e os serviços q eles acessem;
+
+As APIs são habilitadas de acordo com os níveis de confiança dos xApps.
 
 ### AI/ML Support
 
